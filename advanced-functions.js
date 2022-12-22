@@ -30,7 +30,7 @@ and then , if you apply abreviates of arrow functions :
 one parameter -- no need of parenteshis 
 one line --- no need to write the word return
 all turns into
-const longNotSoLongFunction = a => a+b
+const longNotSoLongFunction = a => (b) => a+b
 
 */
 
@@ -44,6 +44,15 @@ const canIDrive = () => {
 }
 
 console.log(canIDrive()(19));
+
+// work here
+
+const canIDrive = () => (age) => age>=18;
+
+console.log(canIDrive()(19));
+
+
+
 
 const sayHello = (greeting) => {
 
@@ -59,3 +68,7 @@ console.log(sayHello('hola')('isis'));
 
 
 // work here
+
+const sayHello = (greeting) => (name) => `${greeting} ${name}`;
+    
+console.log(sayHello('hola')('isis'));
