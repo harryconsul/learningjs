@@ -43,7 +43,7 @@ const toUpAndReverse = () =>{
 
 }
 
-console.log(toUpAndReverse()('this should look weird'));
+console.log('reverse and up of "this should look weird" ',toUpAndReverse()('this should look weird'));
 
 /// work first closure here
 
@@ -56,6 +56,19 @@ const howManyOf = (letter) => {
     return findLetterIn;
 }
 
-console.log(howManyOf('l')('hola lola'));
+console.log('how many l are in "hola lola" ',howManyOf('l')('hola lola'));
 
 // work here second closure
+
+/* 
+    Now you have to do the oposite 
+    write the long version of the next one line function 
+
+*/
+
+const likesCoffee = (name) =>dailyCups=>dailyCups>=3 || name==='miguel';
+
+console.log('does miguel likes coffee ' , likesCoffee('miguel')(2));
+console.log('does isis likes coffee',likesCoffee('isis')(0));
+
+//work here your long version 
