@@ -30,7 +30,7 @@ and then , if you apply abreviates of arrow functions :
 one parameter -- no need of parenteshis 
 one line --- no need to write the word return
 all turns into
-const longNotSoLongFunction = a => a+b
+const longNotSoLongFunction = a => (b) => a+b
 
 */
 
@@ -40,7 +40,6 @@ const toUpAndReverse = () =>{
         return inputString.toUpperCase().split('').reverse().join('');
     }
     return changeString;
-
 }
 
 console.log('reverse and up of "this should look weird" ',toUpAndReverse()('this should look weird'));
@@ -56,8 +55,6 @@ console.log('reverse and up of "this should look weird" ',toUpAndReverse()('this
 
 
 
-
-
 // Second closure
 
 const howManyOf = (letter) => {
@@ -69,7 +66,16 @@ const howManyOf = (letter) => {
 
 console.log('how many l are in "hola lola" ',howManyOf('l')('hola lola'));
 
+
 // work here second closure
+
+const howManyOf = (letter) => (phrase)=> phrase.split('').filter(char=>char===letter).length
+
+
+console.log('how many l are in "hola lola" ',howManyOf('l')('hola lola'));
+
+
+
 
 /* 
     Now you have to do the oposite 
@@ -77,9 +83,18 @@ console.log('how many l are in "hola lola" ',howManyOf('l')('hola lola'));
 
 */
 
-const likesCoffee = (name) =>dailyCups=>dailyCups>=3 || name==='miguel';
+const likesCoffee = (name) => dailyCups => dailyCups >=3 || name==='miguel';
 
 console.log('does miguel likes coffee ' , likesCoffee('miguel')(2));
 console.log('does isis likes coffee',likesCoffee('isis')(0));
 
+
 //work here your long version 
+
+const likesCoffee = (name) => {
+    const howMany = (dailyCups) => {
+        
+        return dailyCups >= 3 || name ==='miguel';
+    }
+    return howMany;
+}
