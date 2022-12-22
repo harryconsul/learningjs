@@ -45,7 +45,18 @@ const toUpAndReverse = () =>{
 
 console.log('reverse and up of "this should look weird" ',toUpAndReverse()('this should look weird'));
 
+
 /// work first closure here
+
+const toUpAndReverse = () => (inputString) => inputString.toUpperCase().split('').reverse().join('');
+    
+
+console.log('reverse and up of "this should look weird" ',toUpAndReverse()('this should look weird'));
+
+
+
+
+
 
 // Second closure
 
