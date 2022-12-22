@@ -34,28 +34,28 @@ const longNotSoLongFunction = a => a+b
 
 */
 
-const canIDrive = () => {
-
-    const checkAge = (age) =>{
-        return age>=18;
+/// First Closure 
+const toUpAndReverse = () =>{
+    const changeString = (inputString)=>{
+        return inputString.toUpperCase().split('').reverse().join('');
     }
+    return changeString;
 
-    return checkAge;
 }
 
-console.log(canIDrive()(19));
+console.log(toUpAndReverse()('this should look weird'));
 
-const sayHello = (greeting) => {
+/// work first closure here
 
-    const doGreeting = (name) =>{
-        return `${greeting} ${name}`;
+// Second closure
+
+const howManyOf = (letter) => {
+    const findLetterIn = (phrase)=>{
+        return phrase.split('').filter(char=>char===letter).length
     }
-
-    return doGreeting;
+    return findLetterIn;
 }
 
-console.log(sayHello('hola')('isis'));
+console.log(howManyOf('l')('hola lola'));
 
-
-
-// work here
+// work here second closure
