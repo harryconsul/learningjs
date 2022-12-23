@@ -1,3 +1,3 @@
 # learningjs
-This repo has exersicese to practice and learn JavaScript
+This repo has exercises  to practice and learn JavaScript
 
